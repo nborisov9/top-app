@@ -1,5 +1,6 @@
 import { Htag } from '../components';
 import { Button } from '../components';
+import { Paragraph } from '../components';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Button arrow="right" apperance="ghost">
         Test
       </Button>
+      <Paragraph>Текст</Paragraph>
     </div>
   );
 }
