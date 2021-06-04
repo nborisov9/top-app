@@ -1,0 +1,22 @@
+.emptyStar {
+	svg {
+		fill: #E2E2E2;
+	}
+}
+
+.filledStar {
+	svg {
+		fill: var(--primary);
+	}
+}
+
+.star {
+	svg {
+		margin: 0px 0px 0px 5px;
+	}
+}
+
+.editable {
+	cursor: pointer;
+}
+
