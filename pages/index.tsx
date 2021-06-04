@@ -1,6 +1,7 @@
 import { Htag } from '../components';
 import { Button } from '../components';
 import { Paragraph } from '../components';
+import { Tag } from '../components';
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
         Test
       </Button>
       <Paragraph>Текст</Paragraph>
+      <Tag color="primary">Tag</Tag>
+      <Tag color="ghost">Tag</Tag>
+      <Tag color="red">Tag</Tag>
+      <Tag color="green">Tag</Tag>
     </div>
   );
 }
