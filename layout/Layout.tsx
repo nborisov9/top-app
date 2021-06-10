@@ -6,16 +6,16 @@ import { Footer } from './Footer';
 
 import { LayoutProps } from './Layout.props';
 
+import styles from './Layout.module.scss';
+
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>
-      <Header />
-      <div>
-        <Sidebar />
-        <div>{children}</div>
-      </div>
-      <Footer />
-    </>
+    <div className={styles.wrapper}>
+      <Header className={styles.header} />
+      <Sidebar className={styles.sidebar} />
+      <div className={styles.body}>{children}</div>
+      <Footer className={styles.footer} />
+    </div>
   );
 };
 

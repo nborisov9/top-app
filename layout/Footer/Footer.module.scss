@@ -1,0 +1,36 @@
+.footer {
+	background: var(--bg-footer);
+	padding: 25px 30px;
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	grid-gap: 0 40px;
+}
+
+.text {
+	color: var(--white);
+
+	&:nth-child(2),
+	&:nth-child(3) {
+		cursor: pointer;
+
+		transition: color .1s linear;
+
+		&:hover {
+			transition: color .1s linear;
+			color: var(--gray-light);
+		}
+	}
+}
+
+@media(max-width: 765px) {
+		.footer {
+			grid-template-columns: 1fr;
+			padding: 8px 20px;
+			justify-items: center;
+			grid-gap: 8px 0px;
+		}
+
+		.text {
+			text-align: center;
+		}
+}
