@@ -4,6 +4,7 @@ import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 import { Footer } from './Footer';
 
+import { AppContextProvider, IAppContext } from '../context/app.context';
 import { LayoutProps } from './Layout.props';
 
 import styles from './Layout.module.scss';
@@ -19,11 +20,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export const withLayout = <T extends Record<string, unknown>>(Component: React.FC<T>) =>
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(Component: React.FC<T>) =>
   function withComponentLayout(props: T) {
+    const { menu, firstCategory } = props;
+
     return (
-      <Layout>
-        <Component {...props} />
-      </Layout>
+      <AppContextProvider menu={menu} firstCategory={firstCategory}>
+        <Layout>
+          <Component {...props} />
+        </Layout>
+      </AppContextProvider>
     );
   };

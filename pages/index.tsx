@@ -13,8 +13,10 @@ import { withLayout } from '../layout/Layout';
 
 import { MenuItem } from '../interfaces/menu.interface';
 
-const Home: React.FC<HomeProps> = ({ menu }) => {
+const Home: React.FC<HomeProps> = ({ menu, firstCategory }) => {
   const [rating, setRating] = React.useState(0);
+
+  console.log(menu);
 
   return (
     <>
