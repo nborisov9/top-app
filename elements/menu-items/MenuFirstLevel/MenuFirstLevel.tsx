@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import classnames from 'classnames';
 
-import { firstLevelMenu } from '../../../layout/Menu/Menu';
+import { firstLevelMenu } from '../../../helpers/helpers';
 
 import { useAppContext } from '../../../context/app.context';
 import { FirstLevelMenuItems } from '../../../interfaces/menu.interface';
